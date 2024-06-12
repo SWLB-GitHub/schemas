@@ -1,0 +1,47 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://swlb.de/iot/csv4-gateway-schema.json",
+    "title": "CSv4 Device",
+    "description": "ChirpStack v4 device information schema",
+    "type": "object",
+	"properties": {
+        "tenantId": {
+            "description": "Tenant ID of transimitting device",
+            "type": "string"
+        },
+        "tenantName": {
+            "description": "Tenant Name of transmitting device",
+            "type": "string"
+        },
+        "applicationId": {
+            "description": "Application ID of transmitting device",
+            "type": "string"
+        },
+        "applicationName": {
+            "description": "Application Name of transmitting device",
+            "type": "string"
+        },
+        "deviceProfileId": {
+            "description": "Device Profile ID of transimitting device",
+            "type": "string"
+        },
+        "deviceProfileName": {
+            "description": "Device Profile Name of transimitting device",
+            "type": "string"
+        },
+        "deviceName": {
+            "description": "Name of transmitting device",
+            "type": "string"
+        },
+        "devEui": {
+            "description": "EUI of transimitting device",
+            "type": "string"
+        },
+        "tags": {
+            "description": "Tags of transitting device (Optional)",
+            "type": "object",
+            "properties": {}
+        }
+    },
+    "required": [ "tenantId", "tenantName", "applicationId", "applicationName", "deviceProfileId", "deviceProfileName", "deviceName", "devEui" ]
+}
