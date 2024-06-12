@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://swlb.de/iot/csv4-rxinfo-schema.json",
+    "title": "CSv4 RX-Info",
+    "description": "ChirpStack v4 received transmission information of receiving gateway schema",
+    "type": "object",
+	"properties": {
+        "gatewayId": {
+            "description": "ID (device EUI) of receiving gateway",
+            "type": "string"
+        },
+        "uplinkId": {
+            "description": "Uplink ID of transmission in receiving gateway",
+            "type": "integer"
+        },
+        "rssi": {
+            "description": "Receiving Signal Strength Indicator of transmission in dB",
+            "type": "number"
+        },
+        "snr": {
+            "description": "Signal to Noise Ratio of transmission in dB",
+            "type": "number"
+        },
+        "context": {
+            "description": "Context identifier",
+            "type": "string"
+        },
+        "metadata": {
+            "description": "Additional metadata",
+            "type": "object",
+            "properties": {
+                "region_name": {
+                    "description": "LoRaWAN region specific frequency plan",
+                    "type": "string"
+                },
+                "region_common_name": {
+                    "description": "LoRaWAN region specific frequency plans Common Name",
+                    "type": "string"
+                }
+            },
+            "required": [ "region_name", "region_common_name" ]
+        }
+    },
+    "required": [ "gatewayId", "uplinkId", "rssi", "snr", "context", "metadata" ]
+}
