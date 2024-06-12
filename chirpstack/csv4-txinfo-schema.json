@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://swlb.de/iot/csv4-txinfo-schema.json",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/chirpstack/csv4-txinfo-schema.json",
     "title": "CSv4 TX-Info",
     "description": "ChirpStack v4 Transmission-settings of sending device schema",
     "type": "object",
