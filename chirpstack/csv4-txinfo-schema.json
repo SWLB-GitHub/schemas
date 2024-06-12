@@ -1,0 +1,57 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://swlb.de/iot/csv4-txinfo-schema.json",
+    "title": "CSv4 TX-Info",
+    "description": "ChirpStack v4 Transmission-settings of sending device schema",
+    "type": "object",
+	"properties": {
+        "frequency": {
+            "description": "Frequency of transmission in Hz",
+            "type": "integer"
+        },
+        "power": {
+            "description": "Transmission power (EIRP) of sending device in dB (Optional)",
+            "type": "integer"
+        },
+        "modulation": {
+            "description": "Information of transmission details",
+            "type": "object",
+            "properties": {
+                "lora": {
+                    "description": "Information of LoRaWAN details, though a bit redundant, because they are represented by the datarate",
+                    "type": "object",
+                    "properties": {
+                        "bandwidth": {
+                            "description": "Bandwidth of transmission in Hz",
+                            "type": "integer"
+                        },
+                        "spreadingFactor": {
+                            "description": "Spreading Factor according to LoRaWAN Specs",
+                            "type": "integer"
+                        },
+                        "codeRate": {
+                            "description": "Coderate according to LoRaWAN Specs",
+                            "type": "string"
+                        },
+                        "polarizationInversion": {
+                            "description": "Polarization inversion flag (Optional)",
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [ "bandwidth", "spreadingFactor", "codeRate" ]
+                }
+            },
+            "required": [ "lora" ]
+        },
+        "timing": {
+            "description": "Timing delay object (Optional)",
+            "type": "object",
+            "properties": {}
+        },
+        "context": {
+            "description": "Transmission power (EIRP) of sending device in dB (Optional)",
+            "type": "string"
+        }
+    },
+    "required": [ "frequency", "modulation" ]
+}
