@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://swlb.de/iot/csv4-gateway-schema.json",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/chirpstack/csv4-device-schema.json",
     "title": "CSv4 Device",
     "description": "ChirpStack v4 device information schema",
     "type": "object",
