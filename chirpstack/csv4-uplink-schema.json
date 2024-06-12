@@ -1,0 +1,52 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://swlb.de/iot/csv4-uplink-schema.json",
+    "title": "CSv4 Uplink",
+    "description": "ChirpStack v4 Uplink Event schema",
+    "type": "object",
+	"properties": {
+		"deduplicationId": {
+			"description": "Unique ID generated for each message",
+			"type": "string"
+		},
+		"time": {
+			"description": "timestamp, i.e.: 2022-07-18T09:34:15.775023242+00:00",
+			"type": "string"
+		},
+		"deviceInfo": {
+			"description": "Information of transmitting device",
+			"$ref": "csv4-device-schema.json"
+		},
+		"devAddr": {
+			"description": "Device address",
+			"type": "string"
+		},
+		"dr": {
+			"description": "Datarate es per LoRaWAN Specs (0-7 in EU868, though 6/7 are not used)",
+			"type": "integer"
+		},
+		"fPort": {
+			"description": "Port the uplink was sent to",
+			"type": "integer"
+		},
+		"data": {
+			"description": "base64 encoded uplink payload",
+			"type": "string"
+		},
+		"rxInfo": {
+			"description": "List of all receiving gateways",
+			"type": "array",
+			"items": {
+				"description": "Transmission information from the receiving gateway",
+				"$ref": "csv4-rxinfo-schema.json"
+			},
+			"minItems": 1
+		},
+		"txInfo": {
+			"description": "Transmission information from the sending device",
+			"$ref": "csv4-txinfo-schema.json"
+		}
+	},
+	"required": [ "deduplicationId", "time", "deviceInfo", "devAddr", "dr", "fPort", "data", "rxInfo", "txInfo" ]
+}
+  
