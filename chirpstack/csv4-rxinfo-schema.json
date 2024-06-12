@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://swlb.de/iot/csv4-rxinfo-schema.json",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/chirpstack/csv4-rxinfo-schema.json",
     "title": "CSv4 RX-Info",
     "description": "ChirpStack v4 received transmission information of receiving gateway schema",
     "type": "object",
