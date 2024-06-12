@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/devices/elvaco/cmi4140-schema.json",
+    "title": "Elvaco CMi4140 LoRaWAN 0x15",
+    "description": "Decoded Elvaco CMi4140 Payload schema",
+    "type": "object",
+	"properties": {
+		"totalEnergy": {
+			"description": "meter reading of the total energy used",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"totalVolume": {
+			"description": "meter reading of the total volume of fluid",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"currentPower": {
+			"description": "current power consumption",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"currentFlow": {
+			"description": "current flowrate",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"tempFw": {
+			"description": "forward temperature",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"tempRt": {
+			"description": "return temperature",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"device": {
+			"description": "information about this device",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"alarm": {
+			"description": "Transmission information from the sending device",
+			"$ref": "csv4-txinfo-schema.json"
+		}
+	},
+	"required": [ "deduplicationId", "time", "deviceInfo", "devAddr", "dr", "fPort", "data", "rxInfo", "txInfo" ]
+}
+  
