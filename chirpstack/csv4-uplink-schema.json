@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://swlb.de/iot/csv4-uplink-schema.json",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/chirpstack/csv4-uplink-schema.json",
     "title": "CSv4 Uplink",
     "description": "ChirpStack v4 Uplink Event schema",
     "type": "object",
@@ -15,7 +15,7 @@
 		},
 		"deviceInfo": {
 			"description": "Information of transmitting device",
-			"$ref": "csv4-device-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/chirpstack/csv4-device-schema.json"
 		},
 		"devAddr": {
 			"description": "Device address",
@@ -38,13 +38,13 @@
 			"type": "array",
 			"items": {
 				"description": "Transmission information from the receiving gateway",
-				"$ref": "csv4-rxinfo-schema.json"
+				"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/chirpstack/csv4-rxinfo-schema.json"
 			},
 			"minItems": 1
 		},
 		"txInfo": {
 			"description": "Transmission information from the sending device",
-			"$ref": "csv4-txinfo-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/chirpstack/csv4-txinfo-schema.json"
 		}
 	},
 	"required": [ "deduplicationId", "time", "deviceInfo", "devAddr", "dr", "fPort", "data", "rxInfo", "txInfo" ]
