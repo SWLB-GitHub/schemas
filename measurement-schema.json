@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://swlb.de/iot/csv4-uplink-schema.json",
+    "$id": "https://github.com/SWLB-GitHub/schemas/blob/main/measurement-schema.json",
     "title": "Measurement",
     "description": "General Measurement schema",
     "type": "object",
