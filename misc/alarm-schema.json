@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/alarm-schema.json",
+    "title": "Alarm",
+    "description": "General Alarm schema",
+    "type": "object",
+	"properties": {
+		"type": {
+			"description": "type of alarm",
+			"type": "number",
+            "enum": [ "DEVICE", "BATTERY", "RES", "TEMP", "FLOW", "LEAK", "BURST" ]
+		},
+		"code": {
+			"description": "numerical ID of alarm",
+			"type": "number"
+		},
+		"description": {
+			"description": "short description of alarm event (optional)",
+			"type": "string"
+		}
+    },
+	"required": [ "value" ]
+}
+  

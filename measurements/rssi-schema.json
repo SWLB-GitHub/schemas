@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/rssi-schema.json",
+    "title": "RSSI Measurement",
+    "description": "Received Signal Strength Indicator",
+    "type": "object",
+    "properties": {
+        "value": {
+            "description": "RSSI in dB",
+            "type": "number",
+            "minimum": -150,
+            "maximum": 0
+        },
+        "unit": {
+            "description": "physical unit associated with measurement",
+            "const": "dB"
+
+        },
+        "required": [ "value", "unit" ]
+    }
+}

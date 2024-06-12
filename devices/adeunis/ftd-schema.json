@@ -1,0 +1,58 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/devices/adeunis/ftd-schema.json",
+    "title": "Adeunis FTD",
+    "description": "Decoded Adeunis FTD Payload schema",
+    "type": "object",
+	"properties": {
+		"rssi": {
+			"description": "Received Signal Strength Indicator: Signal strength of transmission",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/rssi-schema.json"
+        },
+		"snr": {
+			"description": "Signal to Noise Ratio: Signal strength compared to noise level of target frequency",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/snr-schema.json"
+		},
+		"gatewayId": {
+			"description": "devEUI of receiving gateway with highest RSSI",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"triggeredBy": {
+			"description": "Trigger of current transmission (accelerometer, pushbutton or timer)",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"temperature": {
+			"description": "ambient temperature",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"latitude": {
+			"description": "device latitude",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"longitude": {
+			"description": "device longitude",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"hdop": {
+			"description": "Horizontal Dilution Of Precision, gps quality indicator (0 is theoretical best, values below 2 are good)",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"satCount": {
+			"description": "number of satellite-fixes for GPS",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"uploadCount": {
+			"description": "upload framecounter",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"downloadCount": {
+			"description": "download framecounter",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		},
+		"battery": {
+			"description": "battery voltage",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+		}
+	},
+	"required": [ "deduplicationId", "time", "deviceInfo", "devAddr", "dr", "fPort", "data", "rxInfo", "txInfo" ]
+}

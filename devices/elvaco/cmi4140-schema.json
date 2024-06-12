@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/devices/elvaco/cmi4140-schema.json",
     "title": "Elvaco CMi4140 LoRaWAN 0x15",
-    "description": "Decoded Elvaco CMi4140 Payload schema",
+    "description": "Decoded Elvaco CMi4140 Payload schema (standarf frametype 0x15)",
     "type": "object",
 	"properties": {
 		"totalEnergy": {
@@ -38,6 +38,6 @@
 			"$ref": "csv4-txinfo-schema.json"
 		}
 	},
-	"required": [ "deduplicationId", "time", "deviceInfo", "devAddr", "dr", "fPort", "data", "rxInfo", "txInfo" ]
+	"required": [ "totalEnergy", "totalVolume", "currentPower", "currentFlow", "tempFw", "tempRt" ]
 }
   
