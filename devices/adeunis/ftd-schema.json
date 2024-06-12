@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/devices/adeunis/ftd-schema.json",
     "title": "Adeunis FTD",
-    "description": "Decoded Adeunis FTD Payload schema",
+    "description": "decoded Adeunis FTD Payload schema",
     "type": "object",
 	"properties": {
 		"rssi": {
@@ -18,7 +18,7 @@
 			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
 		},
 		"triggeredBy": {
-			"description": "Trigger of current transmission (accelerometer, pushbutton or timer)",
+			"description": "trigger of current transmission (accelerometer, pushbutton or timer)",
 			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
 		},
 		"temperature": {
@@ -54,5 +54,5 @@
 			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
 		}
 	},
-	"required": [ "deduplicationId", "time", "deviceInfo", "devAddr", "dr", "fPort", "data", "rxInfo", "txInfo" ]
+	"required": [ "rssi", "snr", "gatewayId", "triggeredBy" ]
 }

@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/longitude-schema.json",
+    "title": "longitude",
+    "description": "longitude, geospatial information",
+    "type": "object",
+    "properties": {
+        "value": {
+            "description": "numerical value of longitude",
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+        },
+        "unit": {
+            "const": "°"
+
+        },
+        "required": [ "value", "unit" ]
+    }
+}

@@ -7,11 +7,11 @@
 	"properties": {
         "frequency": {
             "description": "Frequency of transmission in Hz",
-            "type": "integer"
+            "type": "number"
         },
         "power": {
             "description": "Transmission power (EIRP) of sending device in dB (Optional)",
-            "type": "integer"
+            "type": "number"
         },
         "modulation": {
             "description": "Information of transmission details",
@@ -23,11 +23,11 @@
                     "properties": {
                         "bandwidth": {
                             "description": "Bandwidth of transmission in Hz",
-                            "type": "integer"
+                            "type": "number"
                         },
                         "spreadingFactor": {
                             "description": "Spreading Factor according to LoRaWAN Specs",
-                            "type": "integer"
+                            "type": "number"
                         },
                         "codeRate": {
                             "description": "Coderate according to LoRaWAN Specs",

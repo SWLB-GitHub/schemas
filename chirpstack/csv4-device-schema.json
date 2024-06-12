@@ -35,7 +35,8 @@
         },
         "devEui": {
             "description": "EUI of transimitting device",
-            "type": "string"
+            "type": "string",
+            "pattern": "(([0-9|A-F|a-f]{2}[:-]){7}[0-9|A-F|a-f]{2})|[0-9|A-F|a-f]{16}"
         },
         "tags": {
             "description": "Tags of transitting device (Optional)",

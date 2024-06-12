@@ -23,11 +23,11 @@
 		},
 		"dr": {
 			"description": "Datarate es per LoRaWAN Specs (0-7 in EU868, though 6/7 are not used)",
-			"type": "integer"
+			"type": "number"
 		},
 		"fPort": {
 			"description": "Port the uplink was sent to",
-			"type": "integer"
+			"type": "number"
 		},
 		"data": {
 			"description": "base64 encoded uplink payload",

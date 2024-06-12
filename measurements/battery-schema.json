@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/battery-schema.json",
+    "title": "batteryVoltage",
+    "description": "battery voltage in mV",
+    "type": "object",
+    "properties": {
+        "value": {
+            "description": "measured battery voltage",
+            "type": "number",
+            "minimum": 0
+        },
+        "unit": {
+            "const": "mV"
+
+        },
+        "required": [ "value", "unit" ]
+    }
+}

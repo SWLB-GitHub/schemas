@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/snr-schema.json",
-    "title": "SNR Measurement",
+    "title": "SNR measurement",
     "description": "Signal to Noise Ratio",
     "type": "object",
     "properties": {
@@ -12,7 +12,6 @@
             "maximum": 30
         },
         "unit": {
-            "description": "physical unit associated with measurement",
             "const": "dB"
 
         },

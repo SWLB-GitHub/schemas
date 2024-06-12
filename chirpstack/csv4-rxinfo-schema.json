@@ -7,11 +7,12 @@
 	"properties": {
         "gatewayId": {
             "description": "ID (device EUI) of receiving gateway",
-            "type": "string"
+            "type": "string",
+            "pattern": "(([0-9|A-F|a-f]{2}[:-]){7}[0-9|A-F|a-f]{2})|[0-9|A-F|a-f]{16}"
         },
         "uplinkId": {
             "description": "Uplink ID of transmission in receiving gateway",
-            "type": "integer"
+            "type": "number"
         },
         "rssi": {
             "description": "Receiving Signal Strength Indicator of transmission in dB",
