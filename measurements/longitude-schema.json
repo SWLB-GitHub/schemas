@@ -13,7 +13,6 @@
         },
         "unit": {
             "const": "°"
-
         },
         "required": [ "value", "unit" ]
     }

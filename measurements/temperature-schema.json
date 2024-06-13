@@ -13,7 +13,6 @@
         },
         "unit": {
             "const": "°C"
-
         },
         "required": [ "value", "unit" ]
     }

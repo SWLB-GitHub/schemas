@@ -49,4 +49,3 @@
 	},
 	"required": [ "deduplicationId", "time", "deviceInfo", "devAddr", "dr", "fPort", "data", "rxInfo", "txInfo" ]
 }
-  

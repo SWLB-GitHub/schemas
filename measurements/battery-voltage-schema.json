@@ -12,7 +12,6 @@
         },
         "unit": {
             "const": "mV"
-
         },
         "required": [ "value", "unit" ]
     }

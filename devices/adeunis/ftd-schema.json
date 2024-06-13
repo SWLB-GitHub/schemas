@@ -23,35 +23,55 @@
 		},
 		"temperature": {
 			"description": "ambient temperature",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/temperature-schema.json"
 		},
 		"latitude": {
 			"description": "device latitude",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/latitude-schema.json"
 		},
 		"longitude": {
 			"description": "device longitude",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/longitude-schema.json"
 		},
 		"hdop": {
 			"description": "Horizontal Dilution Of Precision, gps quality indicator (0 is theoretical best, values below 2 are good)",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"properties": {
+				"value": {
+					"description": "numerical value of measurement",
+					"type": "number"
+				}
+			}
 		},
 		"satCount": {
 			"description": "number of satellite-fixes for GPS",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"properties": {
+				"value": {
+					"description": "numerical value of measurement",
+					"type": "integer"
+				}
+			}
 		},
 		"uploadCount": {
 			"description": "upload framecounter",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"properties": {
+				"value": {
+					"description": "numerical value of measurement",
+					"type": "integer"
+				}
+			}
 		},
 		"downloadCount": {
 			"description": "download framecounter",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"properties": {
+				"value": {
+					"description": "numerical value of measurement",
+					"type": "integer"
+				}
+			}
 		},
 		"battery": {
 			"description": "battery voltage",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/battery-voltage-schema.json"
 		}
 	},
 	"required": [ "rssi", "snr", "gatewayId", "triggeredBy" ]
