@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/energy-schema.json",
+    "title": "energy",
+    "description": "energy measurement in Wh",
+    "type": "object",
+    "properties": {
+        "value": {
+            "description": "measured energy in Wh, kWh, MWh",
+            "type": "number",
+            "minimum": 0
+        },
+        "unit": {
+            "description": "unit of measurement",
+            "type": "string",
+            "enum": [ "Wh", "kWh", "MWh" ]
+        },
+        "required": [ "value", "unit" ]
+    }
+}

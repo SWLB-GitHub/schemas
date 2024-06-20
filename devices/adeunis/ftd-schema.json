@@ -15,11 +15,13 @@
 		},
 		"gatewayId": {
 			"description": "devEUI of receiving gateway with highest RSSI",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+            "type": "string",
+            "pattern": "(([0-9|A-F|a-f]{2}[:-]){7}[0-9|A-F|a-f]{2})|[0-9|A-F|a-f]{16}"
 		},
 		"triggeredBy": {
 			"description": "trigger of current transmission (accelerometer, pushbutton or timer)",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+            "type": "string",
+			"enum": [ "accelerometer", "pushbutton", "timer" ]
 		},
 		"temperature": {
 			"description": "ambient temperature",

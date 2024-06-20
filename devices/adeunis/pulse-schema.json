@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/devices/adeunis/pulse-schema.json",
+    "title": "Adeunis Pulse",
+    "description": "decoded Adeunis FTD Payload schema",
+    "type": "object",
+	"properties": {
+		"totalConsumptionList": {
+			"description": "Received Signal Strength Indicator: Signal strength of transmission",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/rssi-schema.json"
+        },
+		"totalConsumption": {
+			"description": "Signal to Noise Ratio: Signal strength compared to noise level of target frequency",
+            "type": "number",
+			"minimum": 0
+		},
+		"minFlow": {
+			"description": "minimum measured flow within the last 24 hours",
+            "type": "number",
+			"minimum": 0
+		},
+		"maxFlow": {
+			"description": "maximum measured flow within the last 24 hours",
+            "type": "number",
+			"minimum": 0
+		},
+		"alarm": {
+			"description": "ambient temperature",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/temperature-schema.json"
+		}
+	},
+	"required": [ "rssi", "snr", "gatewayId", "triggeredBy" ]
+}

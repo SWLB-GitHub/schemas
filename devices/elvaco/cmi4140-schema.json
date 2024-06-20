@@ -7,7 +7,7 @@
 	"properties": {
 		"totalEnergy": {
 			"description": "meter reading of the total energy used",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/energy-schema.json"
 		},
 		"totalVolume": {
 			"description": "meter reading of the total volume of fluid",
@@ -23,11 +23,11 @@
 		},
 		"tempFw": {
 			"description": "forward temperature",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/temperature-schema.json"
 		},
 		"tempRt": {
 			"description": "return temperature",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/temperature-schema.json"
 		},
 		"device": {
 			"description": "information about this device",
