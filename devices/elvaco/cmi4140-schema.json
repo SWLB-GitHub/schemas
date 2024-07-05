@@ -2,12 +2,20 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/devices/elvaco/cmi4140-schema.json",
     "title": "Elvaco CMi4140 LoRaWAN 0x15",
-    "description": "decoded Elvaco CMi4140 payload schema (standarf frametype 0x15)",
+    "description": "decoded Elvaco CMi4140 payload fields (standard frametype 0x15)",
     "type": "object",
 	"properties": {
+		"error": {
+			"description": "transmission information from the sending device",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/error-schema.json"
+		},
+		"alarm": {
+			"description": "transmission information from the sending device",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/alarm-schema.json"
+		},
 		"totalEnergy": {
 			"description": "meter reading of the total energy used",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/energy-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
 		},
 		"totalVolume": {
 			"description": "meter reading of the total volume of fluid",
@@ -23,20 +31,15 @@
 		},
 		"tempFw": {
 			"description": "forward temperature",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/temperature-schema.json"
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
 		},
 		"tempRt": {
 			"description": "return temperature",
-			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/measurements/temperature-schema.json"
-		},
-		"device": {
-			"description": "information about this device",
 			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json"
 		},
-		"alarm": {
-			"description": "transmission information from the sending device",
-			"$ref": "csv4-txinfo-schema.json"
+		"subdeviceSerialnumber": {
+			"description": "serial number of connected Kamstrup Multical device",
+			"$ref": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/attribute-schema.json"
 		}
-	},
-	"required": [ "totalEnergy", "totalVolume", "currentPower", "currentFlow", "tempFw", "tempRt" ]
+	}
 }

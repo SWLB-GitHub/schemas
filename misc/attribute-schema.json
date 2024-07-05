@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/attribute-schema.json",
+    "title": "Field",
+    "description": "general attribute schema",
+    "type": "object",
+	"properties": {
+		"type": {
+			"description": "attribute type",
+			"type": "string",
+			"enum": [ "DEVICE", "STATUS", "CONFIG", "LORA" ]
+		},
+		"value": {
+			"description": "value of transmitted attribute",
+			"type": "string"
+		},
+		"valueType": {
+			"description": "datatype of value",
+			"type": "string",
+			"enum": [ "number", "string", "array", "json" ]
+		}
+    },
+	"required": [ "type", "value", "valueType" ]
+}

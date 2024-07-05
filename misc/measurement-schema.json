@@ -1,27 +1,28 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/SWLB-GitHub/schemas/main/misc/measurement-schema.json",
-    "title": "Measurement",
-    "description": "General Measurement schema",
+    "title": "Field",
+    "description": "general measurement schema",
     "type": "object",
 	"properties": {
 		"value": {
-			"description": "numerical value of measurement",
-			"type": "number"
-		},
-		"valueStr": {
-			"description": "string representation of measurement (optional)",
+			"description": "value of transmitted measurement",
 			"type": "string"
+		},
+		"valueType": {
+			"description": "datatype of value",
+			"type": "string",
+			"enum": [ "number", "string", "array", "json" ]
 		},
 		"unit": {
-			"description": "physical unit associated with measurement (optional)",
+			"description": "physical quantity associated with field if appliccable as per https://en.wikipedia.org/wiki/List_of_physical_quantities (optional)",
 			"type": "string"
 		},
-		"ObisCode": {
-			"description": "OBIS code of measurement (optional)",
+		"obisCode": {
+			"description": "OBIS ID of field if appliccable (optional)",
 			"type": "string"
 		}
     },
-	"required": [ "value" ]
+	"required": [ "type", "value", "valueType" ]
 }
   
